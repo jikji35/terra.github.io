@@ -1,0 +1,358 @@
+{% comment %} 
+
+[알림!]  장고(Django)에서는 href주소가 바뀌었다. CSS와 이미지파일, 자바스크립트
+같은경우는 static폴더를 만들어서 반드시 그속에 삽입해야지만된다. static폴더위치는
+polls 하위폴더에있고, migrations/ templates 와 같은 레벨에 있다.
+(참고사이트) https://bodhi-sattva.tistory.com/102
+[주의!] 장고서버에서 홈페이지는 \"본인이만든 프로젝트명"\polls\templates\polls
+속에 들어와야한다.
+
+{% endcomment %}
+
+
+<!--
+# http://127.0.0.1:8000/polls/ 로 설정되어있다.
+-->
+
+
+<!doctype html>
+<html lang="ko"> <!-- 위1번항을 추가하면 떨어지는 크로바이미지 스크립트가 차단됨  -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">	
+<meta name="description" content="직지35회">
+<title>☏직지35</title>
+  <!-- 바뀐 경로 주의-->
+<script src="/static/javascript/jikji.js"></script> <!-- 떨어지는 크로바/시계 스크립트를 외부로돌렸다.  --> 
+<!-- <style>@media ( max-width: 640px ) {
+  body { color: red; }
+}
+</style> -->
+<link rel="stylesheet" href="/static/javascript/style.css">  <!-- 바뀐 경로 주의-->
+<link rel="apple-touch-icon" sizes="57x57" href="/static/image/apple-icon-57x57.png">  <!-- 바뀐 경로 주의-->
+<link rel="apple-touch-icon" sizes="60x60" href="/static/image/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/static/image/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/static/image/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/static/image/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/image/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/static/image/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/image/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/image/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/static/image/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/image/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/static/image/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/image/favicon-16x16.png">
+<link rel="icon" href="/static/image/favicon.ico">    
+<link rel="manifest" href="/static/javascript/manifest.json">  <!-- 바뀐 경로 주의-->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/static/image/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+
+<body>
+
+
+	<table>
+
+  <tbody>
+	<!-- 템플릿에 링크를 적으면, 이 링크는 다음과 같이 부분적으로 하드코딩된다는 것을 기억하세요.   -->
+	
+    <tr>
+      	<td class="header" colspan="6">
+            <div id="Clockday">
+            	<a>00:00</a>
+            </div>
+		   	<div id="Clock">
+				<a>00/00/00</a>
+			</div>
+        </td>
+
+    </tr>
+    <tr>
+      <td class="wrap1" >          
+              
+               <div class="cube">
+					<img src="/static/image/email.png" alt="이메일 아이콘 이미지">
+					<img src="/static/image/phone.png" alt="폰 아이콘 이미지">
+					<img src="/static/image/jikji.png" alt="직지초 아이콘 이미지">
+					<img src="/static/image/sms.png" alt="문자메세지 아이콘 이미지">
+                </div>
+                    </td>
+                <!-- 바뀐 경로 주의-->
+				<td class="wrap2" colspan="5" ><marquee scrollamount="5">&nbsp;<img src="/static/image/dia_pink.gif" width="14px" height="14px" border="0" alt="/static/image/dia_pink.gif">
+				<img src="/static/image/dia_skyblue.gif" width="14px" height="14px" border="0" alt="/static/image/dia_skyblue.gif">
+				<img src="/static/image/dia_pink.gif" width="14px" height="14px" border="0" alt="/static/image/dia_pink.gif">&nbsp; <span>직지초35회&nbsp;</span><a>김천지부 동기연락망</a>&nbsp;&nbsp;<img src="/static/image/dia_pink.gif" width="14px" height="14px" border="0" alt="/static/image/dia_pink.gif">
+				<img src="/static/image/dia_skyblue.gif" width="14px" height="14px" border="0" alt="/static/image/dia_skyblue.gif">
+				<img src="/static/image/dia_pink.gif" width="14px" height="14px" border="0" alt="/static/image/dia_pink.gif"></marquee></td>
+
+    </tr>
+
+    <tr>
+      <td class="no"><span>NO</span></td>
+	  <td class="name"><span>이름</span></td>
+      <td class="tel"><span>전화번호</span></td>
+      <td class="address"><span>거주지</span></td>
+      <td class="remark"><span>비고</span></td>
+      <td class="sms"><span>SMS</span></td>
+      
+    </tr>
+      
+    <tr>
+       <td class="no_1">1</td>
+       <td class="name_1"><a href="tel:010-2869-9977"><span>김병철</span></a></td>
+       <td class="tel_1"><a href="tel:010-2869-9977"><span>010-2869-9977</span></a></td>
+       <td class="address_1"><span>김천</span></td>
+       <td class="remark_1"><span>&nbsp;</span></td>
+       <td class="sms_1"><a href="sms://010-2869-9977"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>  <!-- 바뀐 경로 주의-->
+    </tr>
+    <tr>
+		<td class="no_1">2</td>
+		<td class="name_1"><a href="tel:010-9140-8020"><span>김상우</span></a></td>
+		<td class="tel_1"><a href="tel:010-9140-8020"><span>010-9140-8020</span></a></td>
+		<td class="address_1"><span>안양</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9140-8020"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">3</td>
+		<td class="name_1"><a href="tel:010-8980-3564"><span>김상철</span></a></td>
+		<td class="tel_1"><a href="tel:010-8980-3564"><span>010-8980-3564</span></a></td>
+		<td class="address_1"><span>안양</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-8980-3564"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">4</td>
+		<td class="name_1"><a href="tel:010-3588-2322"><span>김이식</span></a></td>
+		<td class="tel_1"><a href="tel:010-3588-2322"><span>010-3588-2322</span></a></td>
+		<td class="address_1"><span>부산</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-3588-2322"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">5</td>
+		<td class="name_1"><a href="tel:010-8724-3277"><span>김종선</span></a></td>
+		<td class="tel_1"><a href="tel:010-8724-3277"><span>010-8724-3277</span></a></td>
+		<td class="address_1"><span>인천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-8724-3277"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">6</td>
+		<td class="name_1"><a href="tel:010-9321-1183"><span>김춘배</span></a></td>
+		<td class="tel_1"><a href="tel:010-9321-1183"><span>010-9321-1183</span></a></td>
+		<td class="address_1"><span>울산</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9321-1183"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">7</td>
+		<td class="name_1"><a href="tel:010-9535-4311"><span>라찬숙</span></a></td>
+		<td class="tel_1"><a href="tel:010-9535-4311"><span>010-9535-4311</span></a></td>
+		<td class="address_1"><span>여주</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9535-4311"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">8</td>
+		<td class="name_1"><a href="tel:010-3535-0111"><span>박건용</span></a></td>
+		<td class="tel_1"><a href="tel:010-3535-0111"><span>010-3535-0111</span></a></td>
+		<td class="address_1"><span>상주</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-3535-0111"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">9</td>
+		<td class="name_1"><a href="tel:010-6866-8844"><span>박영미</span></a></td>
+		<td class="tel_1"><a href="tel:010-6866-8844"><span>010-6866-8844</span></a></td>
+		<td class="address_1"><span>청주</span></td>
+		<td class="remark_1"><span>총무</span></td>
+		<td class="sms_1"><a href="sms://010-6866-8844"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">10</td>
+		<td class="name_1"><a href="tel:010-6628-6266"><span>박정희</span></a></td>
+		<td class="tel_1"><a href="tel:010-6628-6266"><span>010-6628-6266</span></a></td>
+		<td class="address_1"><span>영천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6628-6266"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">11</td>
+		<td class="name_1"><a href="tel:010-6790-3746"><span>백금순</span></a></td>
+		<td class="tel_1"><a href="tel:010-6790-3746"><span>010-6790-3746</span></a></td>
+		<td class="address_1"><span>구미</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6790-3746"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">12</td>
+		<td class="name_1"><a href="tel:010-5281-8008"><span>백기성</span></a></td>
+		<td class="tel_1"><a href="tel:010-5281-8008"><span>010-5281-8008</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-5281-8008"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">13</td>
+		<td class="name_1"><a href="tel:010-6294-5982"><span>백상숙</span></a></td>
+		<td class="tel_1"><a href="tel:010-6294-5982"><span>010-6294-5982</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6294-5982"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">14</td>
+		<td class="name_1"><a href="tel:010-9088-7067"><span>백영숙</span></a></td>
+		<td class="tel_1"><a href="tel:010-9088-7067"><span>010-9088-7067</span></a></td>
+		<td class="address_1"><span>청주</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9088-7067"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">15</td>
+		<td class="name_1"><a href="tel:010-8343-3594"><span>성민화</span></a></td>
+		<td class="tel_1"><a href="tel:010-8343-3594"><span>010-8343-3594</span></a></td>
+		<td class="address_1"><span>군포</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-8343-3594"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">16</td>
+		<td class="name_1"><a href="tel:010-6488-2412"><span>안 호</span></a></td>
+		<td class="tel_1"><a href="tel:010-6488-2412"><span>010-6488-2412</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><a href="sms://010-2869-9977,010-9140-8020,010-8980-3564,010-3588-2322,010-8724-3277,010-9321-1183,010-9535-4311,010-3535-0111,010-6866-8844,010-6628-6266,010-6790-3746,010-5281-8008,010-6294-5982,010-9088-7067,010-8343-3594,010-2760-3519,010-6232-4797,010-9340-5503,010-6242-6263,010-7289-0987,010-9609-1688,010-4041-1754,010-4538-6724,010-5958-9945,010-2276-6007,010-9326-5697,010-6623-5695,010-8586-2506"><span>회장</span></a></td>
+		<td class="sms_1"><a href="sms://010-6488-2412"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>  <!-- 바뀐 경로 주의-->
+    </tr>
+    <tr>
+		<td class="no_1">17</td>
+		<td class="name_1"><a href="tel:010-2760-3519"><span>유영식</span></a></td>
+		<td class="tel_1"><a href="tel:010-2760-3519"><span>010-2760-3519</span></a></td>
+		<td class="address_1"><span>인천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-2760-3519"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">18</td>
+		<td class="name_1"><a href="tel:010-6232-4797"><span>윤종합</span></a></td>
+		<td class="tel_1"><a href="tel:010-6232-4797"><span>010-6232-4797</span></a></td>
+		<td class="address_1"><span>수원</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6232-4797"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">19</td>
+		<td class="name_1"><a href="tel:010-9340-5503"><span>이종희</span></a></td>
+		<td class="tel_1"><a href="tel:010-9340-5503"><span>010-9340-5503</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9340-5503"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">20</td>
+		<td class="name_1"><a href="tel:010-6242-6263"><span>임명희</span></a></td>
+		<td class="tel_1"><a href="tel:010-6242-6263"><span>010-6242-6263</span></a></td>
+		<td class="address_1"><span>안산</span></td>
+		<td class="fg2"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6242-6263"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">21</td>
+		<td class="name_1"><a href="tel:010-7289-0987"><span>전기성</span></a></td>
+		<td class="tel_1"><a href="tel:010-7289-0987"><span>010-7289-0987</span></a></td>
+		<td class="address_1"><span>부산</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-7289-0987"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">22</td>
+		<td class="name_1"><a href="tel:010-9609-1688"><span>전상준</span></a></td>
+		<td class="tel_1"><a href="tel:010-9609-1688"><span>010-9609-1688</span></a></td>
+		<td class="address_1"><span>안산</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9609-1688"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">23</td>
+		<td class="name_1"><a href="tel:010-4041-1754"><span>전영순</span></a></td>
+		<td class="tel_1"><a href="tel:010-4041-1754"><span>010-4041-1754</span></a></td>
+		<td class="address_1"><span>홍천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-4041-1754"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">24</td>
+		<td class="name_1"><a href="tel:010-4538-6724"><span>전종철</span></a></td>
+		<td class="tel_1"><a href="tel:010-4538-6724"><span>010-4538-6724</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-4538-6724"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">25</td>
+		<td class="name_1"><a href="tel:010-5958-9945"><span>전창섭</span></a></td>
+		<td class="tel_1"><a href="tel:010-5958-9945"><span>010-5958-9945</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-5958-9945"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">26</td>
+		<td class="name_1"><a href="tel:010-2276-6007"><span>조병남</span></a></td>
+		<td class="tel_1"><a href="tel:010-2276-6007"><span>010-2276-6007</span></a></td>
+		<td class="address_1"><span>천안</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-2276-6007"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">27</td>
+		<td class="name_1"><a href="tel:010-9326-5697"><span>조영한</span></a></td>
+		<td class="tel_1"><a href="tel:010-9326-5697"><span>010-9326-5697</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-9326-5697"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">28</td>
+		<td class="name_1"><a href="tel:010-6623-5695"><span>최영애</span></a></td>
+		<td class="tel_1"><a href="tel:010-6623-5695"><span>010-6623-5695</span></a></td>
+		<td class="address_1"><span>황간</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-6623-5695"><span><img class="max-small" src="/static/image/sms-4.png"></span></a></td>
+    </tr>
+    <tr>
+		<td class="no_1">29</td>
+		<td class="name_1"><a href="tel:010-8586-2506"><span>허남희</span></a></td>
+		<td class="tel_1"><a href="tel:010-8586-2506"><span>010-8586-2506</span></a></td>
+		<td class="address_1"><span>김천</span></td>
+		<td class="remark_1"><span>&nbsp;</span></td>
+		<td class="sms_1"><a href="sms://010-8586-2506"><img class="max-small" src="/static/image/sms-4.png"></a></td>
+    </tr>
+      
+ 
+    <tr>
+      <td colspan="6" >
+          
+        <div class="gototop">   <!-- 우측제일하단 화살표를 누르면 제일위로 이동하게한다.   -->
+        <a href="#"><img class="fa" src="/static/image/arrow.png"></a>  <!-- 바뀐 경로 주의-->
+        </div>
+				
+          
+		  <div class="foot">  <!-- 바뀐 경로 주의-->
+	    <img src="/static/image/anicircle03_green.gif">&nbsp;&nbsp;<span class="jik"><a href="https://jikji35.netlify.app">https://jikji35.netlify.app</a></span>&nbsp;
+		<img src="/static/image/anicircle03_green.gif">
+		  </div>
+          
+ 
+	  </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>

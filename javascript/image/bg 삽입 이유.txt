@@ -1,0 +1,8 @@
+인터넷 접속하면
+marquee 전광판 바탕화면 역활을 하는 bg.gif파일을
+찾지못해서 화면에 보이질않는다.
+
+==> "GET /static/javascript/image/bg.gif HTTP/1.1" 404 1828
+이렇게 찾을수없다고 에러가 뜬다. 할수없이 바깥 static폴더 안에
+image폴더속에 파일이 들어있는데, 복사해서 부득이하게 
+polls\static\javascript\image 폴더속에 넣었다. (에러해결!)

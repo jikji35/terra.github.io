@@ -8,7 +8,7 @@
 
 
 body {
-    width:40rem;  /* 기준치로 640px 로잡았으니 손대지말것 */
+    width:25rem;  /* 기준치로 470px 로잡았으니 손대지말것 */
     padding: 0;
     margin:0 auto;
     height: 100vh;
@@ -592,7 +592,7 @@ body > div > div.hero{
 
     
     body {
-        width:50rem;  /* 기준치로 900px 로잡았으니 손대지말것 */
+        width:40rem;  /* 기준치로 900px 로잡았으니 손대지말것 */
         padding: 0;
         margin:0 auto;
         height: 100vh;

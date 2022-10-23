@@ -75,10 +75,10 @@ header{
 
 /* @media 는 반응형으로 변할수있게 설정하는 부분이다. 640px너비이하로 되면
 아래형식으로 변화시키라는 의미이다.  */
-@media screen and (max-width: 640px){
+@media screen and (max-width: 570px){
 
 body {
-    width:30rem;  /* 기준치로 640px 로잡았으니 손대지말것 */
+    width:25rem;  /* 기준치로 400px 로잡았으니 손대지말것 */
     padding: 0 auto;
 
     height: 120vh;

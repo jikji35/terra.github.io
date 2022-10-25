@@ -18,10 +18,12 @@ body {
 }
 
 
+
+
 #wrap {
     position: relative;
     text-align: center;
-
+    padding: 15px 15px;
     margin: 0 auto;
     width:100%;
     height:120vh;  
@@ -42,20 +44,25 @@ body {
     }
 
 
+
+
+
 /* index1 ~index6.html  */
 header{
     width:100%;
     height:3rem;
+    text-align: center;
     background: #2E7FA4 ;
     border-radius: 10px 10px 5px 5px;
     
 }
 
 /* index1.html ~ 6페이지 */
-#wrap > header > h1{
+body > div > div > div > header > h1{   /* 직지초 35회 동기회칙 타이틀제목 */
         
     width:100%;
-
+    vertical-align: middle;
+    padding: 4px 0 0 0;
     font-size: 2.0rem;
     font:bold; 
     justify-content: center;
@@ -65,10 +72,35 @@ header{
     border-radius: 10px 10px 5px 5px;
 }
     
+body > div > div > div > section > h2{
+    font-size: 1.8rem;
+    color: blue;
+}
+
+body > div > div > div > section > h2:nth-child(4){
+    font-size: 1.6rem;
+}
+
+body > div > div > div > section > h2:nth-child(15){
+    font-size: 1.6rem;
+}
+
+body > div > div > div > section > h2:nth-child(20){
+font-size: 1.6rem;
+}
+
+body > div > div > div > section > h2:nth-child(22){
+    font-size: 1.6rem;
+}
+
+body > div > div > div > section > h2:nth-child(23){
+    font-size: 1.6rem;
+}
 
 
-
-
+body > div > div > div > section > h3{
+    font-size: 1.4rem;
+}
 
 
 
@@ -116,7 +148,21 @@ body {
 #wrap > header > h1{
         
     width:100%;
+    vertical-align: middle;
+    font-size: 1.7rem;
+    font:bold; 
+    justify-content: center;
+    color:sandybrown;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px 10px 5px 5px;
+}
+    
 
+#wrap > header{
+        
+    width:100%;
+    vertical-align: middle;
     font-size: 1.7rem;
     font:bold; 
     justify-content: center;

@@ -9,7 +9,6 @@
 
 body {
     width:25rem;  /* 기준치로 470px 로잡았으니 손대지말것 */
-    padding: 0;
     margin:0 auto;
     height: 100vh;
     text-align: center;
@@ -24,8 +23,16 @@ body {
 .navbar.navbar-dark.bg-dark.fixed-top{
     position: absolute;
     width:100%;   
-
+	height: 3.5rem;
 }
+
+
+div.container-fluid{
+	    height: 50px;
+}
+
+
+
 
 
 
@@ -39,7 +46,7 @@ body {
 
 
 .navbar-toggler{
-
+	margin: 0rem;
     padding-right:0.62rem ; /* 10px */
 }
 
@@ -50,6 +57,16 @@ body > nav > div > button > span{
 }
 
 
+/* 원형 스피너 회전시키기  */
+div.spinner-border.spinner-border-sm{
+
+	margin: 30px 0 0 0;
+    justify-content : center;
+    align-items : center;
+	
+	-webkit-animation: 40s linear infinite spinner-border;  /* 원형 스피너 회전  */
+	animation: 40s linear infinite spinner-border;  /* 원형 스피너 회전  */
+}
 
 
 
@@ -150,10 +167,10 @@ body > div > nav{
 }
 
 
-/* 직지35회 황악회 메뉴 */
+/* 직지35회 황악회 글자 */
 #offcanvasDarkNavbarLabel{
     color: rgb(244, 115, 55);
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-left: 1.8rem;
 }
 
@@ -168,19 +185,23 @@ body > div > nav{
 
 /* Dropdown 펼핌메뉴 */
 li.nav-item.dropdown{
-	padding-top: 350px;
+	padding-top: 400px;
 
 }
 
 
 
-/* Home 메뉴 */
-#offcanvasDarkNavbar > div.offcanvas-body > ul > li:nth-child(1) > a > h2{
-    color: rgb(126, 135, 251);
-    font-size: 1.4em;
-    margin-left: 1.8rem;
+/* Home 글자 */
+a.btn.btn-primary{
+	margin-left: 1.8rem;
+	margin: 19px;
 }
 
+
+ul.dropdown-menu dropdown-menu-dark{
+	margin-top: 0;
+	padding-top: 0;
+}
 
 
 /* 동기회칙 보기 메뉴 */
@@ -238,7 +259,9 @@ li.nav-item.dropdown{
 /* 상단의 네비바 밑 동영상부분  */
 body > div > div.hero{
 
-    border: 5px solid red;
+    border: 2px solid red;
+	margin: 0;
+	padding: 0;
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -251,11 +274,11 @@ body > div > div.hero{
 
 /* 동영상 화면 */
 .hero video {
-    margin-top:28px;
+    margin-top:23px;
     position: absolute;
     width: 100%;
     /*min-width: 100%;*/
-    min-height: 20vh;
+    min-height: 30vh;
     z-index: -1;  /*heading 텍스트문자가 동영상위로 나타나게 한다.  */
     display: block;
 }
@@ -266,7 +289,7 @@ body > div > div.hero{
 .hero .heading {
     text-align: center;
     width: 100%;
-    color: #fff;
+    color: #000;
 
     
 }
@@ -276,7 +299,7 @@ body > div > div.hero{
     margin-top: 50%;  /* 글자 아래로 내리기 */
     font-weight: 900;  /* 글자 굵기를 정하는 수치 */
     line-height: 1.6em;
-    font-size: 100%;
+    font-size: 150%;
     position: absolute;   /* left: 50%; transform: translateX(-50%); */
     top: 50%;
     left: 50%;
@@ -363,7 +386,7 @@ body > div > div.hero{
     }
 
     .navbar-toggler{
-
+		margin: 0rem;
         padding-right:0.62rem ; /* 10px */
     }
 
@@ -497,6 +520,15 @@ body > div > div.hero{
     }
 
 
+
+	/* Home 글자 */
+	a.btn.btn-primary{
+		margin-left: 1.8rem;
+	}
+
+
+
+
     /* 황악회칙 텍스트  */
     section{
             float:none; 
@@ -510,7 +542,7 @@ body > div > div.hero{
     /* 네비게이션바 아래 전체 */
     body > div > div.hero{
 
-        border: 5px solid red;
+        border: 3px solid red;
         height: 100vh;
         width: 100%;
         position:  relative;
@@ -623,7 +655,8 @@ body > div > div.hero{
 
 
     .navbar-toggler{
-
+		margin: 0rem;
+		padding-top: 1rem;
         padding-right:0.62rem ; /* 10px */
     }
 
@@ -732,20 +765,22 @@ body > div > div.hero{
     }
 
 
-    /* 직지35회 황악회 메뉴 */
+
+
+
+    /* 직지35회 황악회 글자 */
     #offcanvasDarkNavbarLabel{
         color: rgb(244, 115, 55);
-        font-size: 1.8em;
-        margin-left: 1.8rem;
+        font-size: 1.3em;
+        margin-left: 1.5rem;
     }
 
 
-    /* Home 메뉴 */
-    #offcanvasDarkNavbar > div.offcanvas-body > ul > li:nth-child(1) > a > h2{
-        color: rgb(126, 135, 251);
-        font-size: 1.4em;
-        margin-left: 1.8rem;
-    }
+	/* Home 글자 */
+	a.btn.btn-primary{
+		margin-left: 1.8rem;
+	}
+
 
 
 
@@ -817,7 +852,7 @@ body > div > div.hero{
 
     /* 동영상 화면 */
     .hero video {
-        margin-top:28px;
+        margin-top:30px;
         position: absolute;
         width: 100%;
         /*min-width: 100%;*/

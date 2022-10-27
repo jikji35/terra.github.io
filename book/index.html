@@ -40,22 +40,34 @@
 
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
+	
             <a class="navbar-brand" href="../index.html">Home navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">직지35회 황악회</h5>
+				
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
+
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html"><h2>Home</h2></a>
+					<!--  Home버튼 ==> 클릭하면 메인페이지로 이동 -->
+					<a class="btn btn-primary" href="../index.html" role="button">Home</a>
                     <br>
-                    
 					
+					
+				<!-- 스피너 원형으로 회전시키기! ==> 직지35황악회 문자도 같이 회전한다.  -->
+				<br><br><br><br>
+				<div class="d-flex justify-content-center">
+					<div class="spinner-border spinner-border-sm text-success" role="status">
+						<span class="visually-hidden">Loading...</span>
+						<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">직지35회 황악회</h5>
+					</div>
+				</div>
+                	
 					
 					
 					
@@ -63,7 +75,7 @@
 			<div class="d-flex gap-5 justify-content-center">
 
 			  <ul class="dropdown-menu dropdown-menu-dark position-static d-grid gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-				<li><a class="dropdown-item rounded-2 active" href="#">황악회칙보기</a></li>
+				<li><a class="dropdown-item rounded-2 active">황악회칙보기</a></li>
 				<li><a class="dropdown-item rounded-2" href="../book/index1.html">1페이지</a></li>
 				<li><a class="dropdown-item rounded-2" href="../book/index2.html">2페이지</a></li>
 				<li><a class="dropdown-item rounded-2" href="../book/index3.html">3페이지</a></li>
@@ -74,7 +86,7 @@
 			</div>
 					
 					
-					
+
 					
 					
 					

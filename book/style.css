@@ -8,7 +8,7 @@
 
 
 body {
-    width:25rem;  /* 기준치로 470px 로잡았으니 손대지말것 */
+    width:100%;  
     margin:0;
     height: 100vh;
     text-align: center;
@@ -27,9 +27,6 @@ body {
 }
 
 
-div.container-fluid{
-	    height: 50px;
-}
 
 
 
@@ -39,45 +36,16 @@ div.container-fluid{
 
 div.container-fluid{
 	position: fixed;
+    height: 50px;
+	width: 100%;
 }
 
 
 
 /*  네비바에 있는 "Home navbar" 글자  */
 a.navbar-brand{
-	font-size: 0.9rem;
+	font-size: 0.7rem;
 }
-
-
-
-
-
-
-/*   구글 머터리얼 아이콘   */
-
-body > nav > div > div.material-symbols.text-light{
-	width: 8.4rem;  /* 135px */
-
-	justify-content: space-between;
-}
-
-
-/*   구글 머터리얼 아이콘   */
-body > nav > div > div.material-symbols.text-light > a:nth-child(1){
-	margin-left: 0px;
-	text-decoration-line: none;  /*  링크 밑줄제거  */
-}
-
-body > nav > div > div.material-symbols.text-light > a:nth-child(2){
-	margin-left: 0.625rem;
-	text-decoration-line: none;  /*  링크 밑줄제거  */
-}
-
-body > nav > div > div.material-symbols.text-light > a:nth-child(3){
-	margin-left: 0.625rem;
-	text-decoration-line: none;  /*  링크 밑줄제거  */
-}
-
 
 
 
@@ -94,18 +62,19 @@ body > nav > div > div.material-symbols.text-light > a:nth-child(3){
 
 
 /* 햄버거버튼 바깥 사각 테두리 */
-.navbar-toggler{
-	margin-right: 11%;
-    padding-right:0.62rem ; /* 10px */
-	width:2rem;
-	height:2rem;
+button.navbar-toggler{
+margin-right: 21%;
+padding-right:1.62rem ; /* 10px */
+width:1.6rem;
+height:1.6rem;
 
 }
 
+
 /* 햄버거버튼 (줄3개) */
 span.navbar-toggler-icon{
-	width:1.5rem;
-	height:1.5rem;
+	width:1.4rem;
+	height:1.4rem;
 	margin-left: -0.54rem;
 	margin-bottom: 0.19rem;
 }
@@ -199,6 +168,18 @@ header{
         text-align-last: left;
 
     }
+
+
+
+/* Dropdown 펼침메뉴 */ 
+div.btn-group{
+	margin-top: 25rem;
+	margin-left: 1.5rem;
+	
+}
+
+
+
 
 
 
@@ -409,7 +390,7 @@ body > div > div.hero{
     }
 
     body {
-        width:30rem;  /* 기준치로 576px 로잡았으니 손대지말것 */
+        width:100%; 
         padding: 0;
         margin:0;
         text-align: center;
@@ -430,7 +411,7 @@ body > div > div.hero{
     }
 
     body > nav > div{
-        width:100%;  /* 기준치로 576px 로잡았으니 손대지말것 */
+        width:100%;  
         padding: 0;
         margin:0 auto;
 
@@ -448,8 +429,8 @@ body > div > div.hero{
 
 
 	/* 햄버거버튼 바깥 사각 테두리 */
-	.navbar-toggler{
-		margin: 0rem;
+	button.navbar-toggler{
+		margin-right: 30%;
 		padding-right:0.62rem ; /* 10px */
 		width:2.5rem;
 		height:2.5rem;
@@ -616,24 +597,6 @@ body > div > div.hero{
 
 
 
-/*   구글 머터리얼 아이콘   */
-
-body > nav > div > div.material-symbols.text-light{
-	display: none;
-}
-
-
-/*   구글 머터리얼 아이콘   */
-body > nav > div > div.material-symbols.text-light > a:nth-child(1){
-	display: none;
-}
-
-body > nav > div > div.material-symbols.text-light > a:nth-child(2){
-	display: none;
-}
-
-body > nav > div > div.material-symbols.text-light > a:nth-child(3){
-	display: none;
 
 
 
@@ -727,7 +690,7 @@ body > nav > div > div.material-symbols.text-light > a:nth-child(3){
 
     
     body {
-        width:40rem;  /* 기준치로 900px 로잡았으니 손대지말것 */
+        width:100%;  
         padding: 0;
         margin: 0;
 
@@ -759,7 +722,7 @@ body > nav > div > div.material-symbols.text-light > a:nth-child(3){
 
 
 	/* 햄버거버튼 바깥 사각 테두리 */
-	.navbar-toggler{
+	button.navbar-toggler{
 		margin: 0rem;
 		padding-right:0.62rem ; /* 10px */
 		width:2.5rem;

@@ -33,9 +33,15 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 }
 
 
+/* 전광판 구역 틀고정시키기 */
+table > tbody > tr:nth-of-type(2){
+  position: sticky;
+  top: 0;
+}
+
 
 .wrap1 {   /* 큐브회전이미지부분 */
-    position: fixed;   /* 큐브 고정이미지 */
+/*    position: fixed;    큐브 고정이미지 */
 	color: aliceblue;
 	width: 1.25rem;   /* 아래position설정으로 잠겨서 가로세폭이안먹히는거같음! */
 	height: 1.18rem;
@@ -46,8 +52,9 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 
 .wrap2 {   /* marquan LED창 */
 	color: aliceblue;
-	width: 500px;
-	height: 32px;
+	width: 450px; /* LED 글자창 너비 */
+	height: 20px;
+    line-height: 20px;
 	padding: 0 66px; /* LED창 길이변 */
 	background-image: url("image/bg.gif");
 	border-radius: 10px 10px 5px 5px;
@@ -93,8 +100,12 @@ marquee > img{
   box-sizing: border-box;
   padding-top: 10px;
 }
-
-
+marquee > span{ /* 직지초35 */
+  font-size: 19px;
+}
+marquee > a{ /* 김천지부 동기연락망 */
+  font-size: 19px;
+}
 
 .no{     /* NO 숫자 제목부분 */
     width: 1.56rem;    /* 25px */

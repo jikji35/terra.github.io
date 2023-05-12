@@ -113,7 +113,7 @@ a {
   #billboard {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 20s linear infinite;
+    animation: billboard 20s linear infinite;
     position: relative;
     animation-fill-mode: forwards;
   }
@@ -315,8 +315,28 @@ billboard > img{
 
 
 /* 스크린화면이 400픽셀이하일때는 전화연락망 메뉴중에서 비고란은 없앤다.  */
-@media (min-width: 320px) and (max-width: 400px) {
+@media (min-width: 320px) and (max-width: 380px) {
   
+  table {
+    width: 380px;
+  }
+  
+  table > tbody {
+    width: 100%;
+  }
+  
+    .header{
+/*    width: 10.9rem;*/
+    width: 100%;
+    height: 1.25rem;
+    margin: auto;
+    text-align: center;
+    color: #f4f4f4;
+    background-color: black;
+    padding: 0.125rem 0px; /*  LED창과 시계와의 상하간격 10px사용  */
+}
+  
+    
   #billboard > span {
   display: inline-block;
   margin-bottom: 5px;
@@ -324,11 +344,11 @@ billboard > img{
   line-height: 16px;
 }
 
+
+  
   .remark{		/* 비고 소제목부분 */
       display: none;
   }
-
-
 
 
   .remark_1{		/* 비고 소제목부분(개인별) */
@@ -346,7 +366,7 @@ billboard > img{
     color:#1690E4;
 }
 .name{    /* 이름 제목부분 */
-    width: 3rem;    /* 90px */
+    width: 1.8rem;    /* 90px */
     height:1.56rem;
     border:1px solid;
     text-align: center;
@@ -356,7 +376,7 @@ billboard > img{
 	letter-spacing: 6;
 }
 .tel{     /* 전화번호 제목부분 */
-    width:5rem;     /* 180px */
+    width: 3rem;     /* 180px */
     height:1.56rem;
     border:1px solid;
     text-align: center;
@@ -366,7 +386,7 @@ billboard > img{
     color:#1690E4;
 }
 .address{		/* 주소 제목부분 */
-    width: 2.5rem;   /* 60px */
+    width: 1.3rem;   /* 60px */
     height: 1.56rem;   /* 25px */
     border:1px solid;
     text-align: center;
@@ -376,7 +396,7 @@ billboard > img{
 }
 
 .sms{		/* SMS 문자메세지 제목부분 */
-    width: 2.2rem;     /* 60px */
+    width: 1rem;     /* 60px */
     height: 1.56rem;
     border:1px solid;
     text-align: center;
@@ -388,7 +408,7 @@ billboard > img{
 
 
 .name_1{		/* 이름 소제목부분 */
-    width: 3rem;    /* 90px */
+    width: 1.8rem;    /* 90px */
     height: 1.56rem;   /* 25px */
     border:1px solid;
     text-align: center;
@@ -397,7 +417,7 @@ billboard > img{
 	letter-spacing: 6;
 }
 .tel_1{		/* 전화번호 소제목부분 */
-    width: 5rem;     /* 180px */
+    width: 3rem;     /* 180px */
     height: 1.56rem;   /* 25px */
     border:1px solid;
     text-align: center;
@@ -406,7 +426,7 @@ billboard > img{
     color:#ffffff;
 }
 .address_1{		/* 주소 소제목부분 */
-    width: 2.5rem;     /* 60px */
+    width: 1.3rem;     /* 60px */
     height: 1.56rem;   /* 25px */
     border:1px solid;
     text-align: center;
@@ -416,7 +436,7 @@ billboard > img{
 }
 
 .sms_1{		/* SMS메세지 소제목부분 */
-    width:  2.2rem;     /* 60px */
+    width:  1rem;     /* 60px */
     height: 1.56rem;  /* 25px */
     border:1px solid;
     text-align: center;
@@ -426,8 +446,8 @@ billboard > img{
 }
 .max-small {        /* sms문자메세지 이미지부 */
     
-    width: 1.28rem;  /* 21px */
-    height: 1.28rem;  /* 21px */
+    width: 1.2rem;  /* 21px */
+    height: 1.2rem;  /* 21px */
 	margin: center;
 	text-align: center;
 }

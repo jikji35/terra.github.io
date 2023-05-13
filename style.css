@@ -29,23 +29,21 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 
 /*CSS : 시계를 꾸미는 부분*/
 .header{
-
     width: 100%;
-    height: 50px;
+    height: 70px;
     margin: auto;
     text-align: center;
     color: #f4f4f4;
     background-color: black;
-    padding: 0.125rem 0px; /*  LED창과 시계와의 상하간격 10px사용  */
+    padding: 0.35rem 0px; /*  LED창과 시계와의 상하간격 10px사용  */
+    box-sizing: border-box;
 }
 #Clock{
-    background-color: black;
 ;
     color: #F0C420;
     font-size: 1.25rem;
 }
 #Clockday{
-  background-color: black;
     color: #F0C420;
 }
 

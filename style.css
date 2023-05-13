@@ -391,17 +391,27 @@ img.max-small {  /* sms문자메세지 이미지부 */
 
 
 /* 스크린화면이 400픽셀이하일때는 전화연락망 메뉴중에서 비고란은 없앤다.  */
-@media (min-width: 320px) and (max-width: 380px) {
+@media screen and (max-width: 580px) {
   
 
-
+  table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: scroll;
+  }
   
-  .remark{	
+  td {
+    width: auto; 	/* 셀너비값 자동지정 */
+    display: block;
+  }
+  
+  
+  .remark{	/* 테이블 셀제목 '비고' 칼럼명 숨김 */
     display: none;
   }
 
 
-  .remark_1{	
+  .remark_1{	/* 테이블 셀제목 '비고' 칼럼명 숨김 */	
     display: none;
   }
   

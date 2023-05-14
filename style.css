@@ -321,7 +321,7 @@ tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
   .gototop{    /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
 
     position: fixed; /* 화살표 위치고정 */
-    top: 649px;
+    top: 600px;
     left: 289px; 
 
 }

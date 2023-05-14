@@ -1,17 +1,31 @@
-@charset "utf-8";
-
-body{
-  
-    background:linear-gradient(to right, #232526,#414345);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-	margin: auto;     
+body {
+  background-color: #3b3d3f;
+  color: white;
+  margin: 0;
+  padding: 0;
   }
-	
- /* margin: 0 auto; 테이블 가운데정렬 */	
-table{border-spacing:0px;border-style:none;padding:0px; margin: 0 auto;}
-td{border-spacing:0px;border-style:none;padding:0px;}
+
+table { /* 번호,이름,전화번호,거주지,비고,SMS 전체구역 */
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #3b3d3f;
+}
+
+th, td { /* 소제목,소제목 입력구역 */
+  border: 1px solid white;
+  text-align: center;
+  padding: 8px;
+}
+
+th { /* 소제목 색상 */
+  background-color: #212121;
+  color: white;
+}
+
+			
+
+
+
 
 
 
@@ -19,7 +33,7 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 /* 전체 넓이 지정 */
 .container {
 /*  border: 3px solid red;*/
-  width: 360px;
+  width: 600px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -28,33 +42,38 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 
 
 
-section {    
+section {  /* 첫번째(날짜,시간) / 두번째칸(큐브,전광판 구역) */  
   margin: 0;
   padding: 0;
-/*  overflow: hidden;*/
 }
 
 
 /*CSS : 시계를 꾸미는 부분*/
-.header{
+.header{ /* 날짜,시간 구역 */
     position: fixed;
-    width: 360px;
+    width: 600px;
     height: 88px;
     margin: 0;
     text-align: center;
     color: #f4f4f4;
     background-color: black;
-    padding: 0; /*  LED창과 시계와의 상하간격 10px사용  */
+    padding: 0; 
     box-sizing: border-box;
 }
-#Clock{
-;
-    color: #F0C420;
-    font-size: 1.25rem;
-}
-#Clockday{
-    color: #F0C420;
-}
+  
+  #Clockday{ /* 날짜표시 */
+  ;
+      color: #F0C420;
+      font-size: 1.25rem;
+  }
+      color: #F0C420;
+      padding-top: 10px;
+  }
+  #Clock{ /* 시간표시 */
+  ;
+      color: #F0C420;
+      font-size: 1.25rem;
+  }
 
 
 
@@ -70,7 +89,7 @@ section {
 	height: 1.18rem;
 	margin-left: 5px;
     margin-top: -33px;
-	padding: 1px 0px 0px 1px;
+	padding: 15px 1px 15px 1px;
     z-index: 10;
     
 }
@@ -86,7 +105,7 @@ section {
   }
 
   .wrap1 > .cube img{
-      position: absolute;
+      position: absolute; /* 큐브 이미지 위치지정 */
       top: 0;
       left: 2px;
   }
@@ -122,12 +141,12 @@ a {
     overflow: hidden;
 	color: aliceblue;
     margin: 0 auto;
-	width: 230px; /* LED 글자창 너비 */
+	width: 469px; /* LED 글자창 너비 */
 	height: 30px;
     line-height: 20px;
 	padding: 0 66px; /* LED창 길이변 */
 	background-image: url("image/bg.gif");
-	border-radius: 3px 3px 0px 0px;
+	border-radius: 2px 2px 0px 0px;
 }
   
 
@@ -138,18 +157,18 @@ a {
   margin: 0 center;
   padding: 0;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap; /* 텍스트 자동줄바꿈 못하게처리한다 */
   }
   
   #billboard {
     display: inline-block;
     padding-left: 100%;
-    animation: billboard 20s linear infinite;
+    animation: billboard 20s linear infinite;  /* 1주기 타이밍 */
     position: relative;
     animation-fill-mode: forwards;
   }
 
-  #billboard > img{
+  #billboard > img{ /* 전광판 이미지 */
     box-sizing: border-box;
     padding-top: 7px;
   }
@@ -178,10 +197,14 @@ a {
 
 
 
- /* 테이블 목록(소제목/회원 목록) */
+			
+			
+	/* 직지35 전화번호부  시작  */		
+			
+	 /* 테이블 목록(소제목/회원 목록) */
 .container > table { 
   width: 100%;
-  margin-top: 89px; /* 테이블 가려진것을 밑으로 내린다 */
+  margin-top: 92px; /* 테이블 가려진것을 밑으로 내린다 */
   padding: 0;
 }
 
@@ -193,153 +216,43 @@ a {
 }
 
 
-th.no{     /* NO 숫자 제목부분 */
-    width: 10px;   
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.6em; /* 12px */
-    color:#1690E4;
+thead > tr th { /* 제목: NO, 이름, 전화번호, 거주지, 기타, SMS */
+  font-size: 14px;
 }
 
-th.name {    /* 이름 제목부분 */
-/*    width: 3.5rem;    */
-    width: 25px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.9em;  
-	font-weight: bold;
-    color:#1690E4;
-
-}
-th.tel{     /* 전화번호 제목부분 */
-/*    width:6rem;    */
-    width: 50px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.9em;  /* 20px */
-	font-weight: bold;
-
-    color:#1690E4;
-}
-th.address{		/* 주소 제목부분 */
-/*    width: 3rem;   */
-    width:  23px;   
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.8em;  
-    color:#1690E4;
+tbody tr td { /* 개인정보 입력구간 */
+  font-size: 12px;
 }
 
+tbody tr td:nth-child(1) { /* 소제목(NO 입력) */
 
-.remark{	/* 비고(회장,총무) 소제목부분 */
-    width: 23px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.8em; 
-    color:#1690E4;
 }
 
+tbody tr td:nth-child(2) { /* 소제목(이름 입력) */
 
-th.sms{		/* SMS 문자메세지 제목부분 */
-/*    width: 2rem;   */
-    width: 20px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.9em; 
-	font-weight: bold;
-    color:#1690E4;
+}
+
+tbody tr td:nth-child(2) { /* 소제목(전화번호 입력) */
+
+}
+
+tbody tr td:nth-child(4) { /* 소제목(거주지 입력) */
+
+}
+
+tbody tr td:nth-child(5) { /* 소제목(비고 입력)- 모바일용일때는 사라짐! */
+
+}
+
+tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
+  width: 21px;  /* 이미지크기 (가로폭) */
+  height: 21px;  /* 이미지크기 (세로폭) */
 }
 
 
 
 
-
-
-td.no_1 {  	/* NO 숫자 소제목부분 */
-    width: 10px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-	font-size:0.8em; 
-    color: #ffffff;
-}
-td.no_2 a{
-    font-size:0.6em;
-    color: #232526;
-}
-
-td.name_1 { /* 이름 소제목부분 */
-/*    width: 3.5rem;    */
-    width: 25px;   
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.9em;  
-    color:#ffffff;
-
-}
-td.tel_1{	/* 전화번호 소제목부분 */
-/*    width:6rem;    */
-    width: 50px;  
-    height: 2.5rem; 
-    border:1px solid;
-    text-align: center;
-    font-size:0.9em;  
-
-    color:#ffffff;
-}
-td.address_1{	/* 주소 소제목부분 */
-/*    width: 3rem;    */
-    width: 23px;  
-    height:2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size:0.8em; 
-    color:#ffffff;
-}
-
-
-.remark_1{	/* 비고(회장,총무) 소제목부분 */
-    width: 23px; 
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    padding: 6px 0;
-    font-size:0.8em; 
-    color:#ffffff;
-}
-
-
-td.sms_1{	/* SMS메세지 소제목부분 */
-/*    width:  2rem;    */
-    width: 20px;  
-    height: 2.5rem;
-    border:1px solid;
-    text-align: center;
-    font-size: 0.9em; 
-    color:#ffffff;
-}
-
-
-
-
-
-img.max-small {  /* sms문자메세지 이미지부 */
-    width: 1rem; 
-    height:  1rem;
-/*	margin: center;*/
-	text-align: center;
-}
-
-
-
-
+/* 하단부 화살표, 외부링크 */
 .foot{
 	display: block;
 	color: antiquewhite;
@@ -372,43 +285,48 @@ img.max-small {  /* sms문자메세지 이미지부 */
     background-color: #838180;
     color:#FFFFFF;
 }
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
+  @media (max-width: 580px) {
+    .hidden {
+      display: none;
+    }
+    
+    /* 전체 넓이 지정 */
+    .container {
+      width: 360px;
 
+    } 
 
+    .header{
+      width: 360px;
+  }  
+    
+    .wrap2 {   /* 전광판 LED창 */
+      width: 360px; /* LED 글자창 너비 */
+    }
 
+    #billboard-container { /* 전광판 LED창 */
+      width: 80%;  /* LED창 텍스트보여주는 면적공간 */
 
-
-
-
-
-
-/* ======================================================================= */
-/* ======================================================================= */
-
-
-
-
-
-
-/* 스크린화면이 400픽셀이하일때는 전화연락망 메뉴중에서 비고란은 없앤다.  */
-@media screen and (max-width: 580px) {
-  
-
-
-  
-  
-  .remark{	/* 테이블 셀제목 '비고' 칼럼명 숨김 */
-    display: none;
+      }
+    
+    
   }
 
 
-  .remark_1{	/* 테이블 셀제목 '비고' 칼럼명 숨김 */	
-    display: none;
-  }
-  
-  
 
-}
+
 
 
 

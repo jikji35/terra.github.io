@@ -50,29 +50,25 @@ section {  /* 첫번째(날짜,시간) / 두번째칸(큐브,전광판 구역) *
 
 /*CSS : 시계를 꾸미는 부분*/
 .header{ /* 날짜,시간 구역 */
-    position: fixed;
-    width: 600px;
-    height: 88px;
-    margin: 0;
-    text-align: center;
-    color: #f4f4f4;
-    background-color: black;
-    padding: 0; 
-    box-sizing: border-box;
+  position: fixed;
+  width: 600px;
+  height: 88px;
+  margin: 0;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: black;
+  box-sizing: border-box;
 }
   
-  #Clockday{ /* 날짜표시 */
-  ;
-      color: #F0C420;
-      font-size: 1.25rem;
-  }
-      color: #F0C420;
-      padding-top: 10px;
-  }
-  #Clock{ /* 시간표시 */
-  ;
-      color: #F0C420;
-      font-size: 1.25rem;
+#Clockday { /* 날짜표시 */
+  color: #F0C420;
+  font-size: 1.25rem;
+  padding-top: 5px; 
+}
+#Clock{ /* 시간표시 */
+  color: #F0C420;
+  font-size: 1.25rem;
+  padding-bottom: 5px; 
   }
 
 
@@ -83,26 +79,26 @@ section {  /* 첫번째(날짜,시간) / 두번째칸(큐브,전광판 구역) *
 
 
 .wrap1 {   /* 큐브회전이미지부분 */
-    position: fixed;    
-	color: aliceblue;
-	width: 1.25rem;   /* 아래position설정으로 잠겨서 가로세로폭이안먹히는거같음! */
-	height: 1.18rem;
-	margin-left: 5px;
-    margin-top: -33px;
-	padding: 15px 1px 15px 1px;
-    z-index: 10;
+  position: fixed;    
+  color: aliceblue;
+  width: 1.25rem;   /* 아래position설정으로 잠겨서 가로세로폭이안먹히는거같음! */
+  height: 1.18rem;
+  margin-left: 5px;
+  margin-top: -33px;
+  padding: 15px 1px 15px 1px;
+  z-index: 10;
     
 }
 
-  .wrap1 > .cube{
-      width: 1.43rem; /* 23px */
-      height: 1.43rem;
-      margin-top: 94px;
-      padding: 1px 0 0 0;
-      transform-style: preserve-3d;
-      transform: rotateX(0);  /* rotatex()값을 변경하면 튜브가 각도만큼 회전한다.  */
-      transition: all 2s;
-  }
+.wrap1 > .cube{
+  width: 1.43rem; 
+  height: 1.43rem;
+  margin-top: 82px; /* 큐브 위치조절 */
+  padding: 1px 0 0 29px;
+  transform-style: preserve-3d;
+  transform: rotateX(0);  /* rotatex()값을 변경하면 튜브가 각도만큼 회전한다.  */
+  transition: all 2s;
+}
 
   .wrap1 > .cube img{
       position: absolute; /* 큐브 이미지 위치지정 */
@@ -110,21 +106,21 @@ section {  /* 첫번째(날짜,시간) / 두번째칸(큐브,전광판 구역) *
       left: 2px;
   }
 
-  .wrap1 > .cube img:nth-child(1){ /* 1번째 이미지 */
-      transform: translateZ(11px);
-  }
+.wrap1 > .cube img:nth-child(1){ /* 1번째 이미지 */
+  transform: translateZ(11px);
+}
 
-  .wrap1 > .cube img:nth-child(2){ /* 2번째 이미지 */
-      transform: rotateX(90deg) translateZ(11px);
-  }
+.wrap1 > .cube img:nth-child(2){ /* 2번째 이미지 */
+  transform: rotateX(90deg) translateZ(11px);
+}
 
-  .wrap1 > .cube img:nth-child(3){ /* 3번째 이미지 */
-      transform: rotateX(180deg) translateZ(11px);
-  }
+.wrap1 > .cube img:nth-child(3){ /* 3번째 이미지 */
+  transform: rotateX(180deg) translateZ(11px);
+}
 
-  .wrap1 > .cube img:nth-child(4){ /* 4번째 이미지 */
-      transform: rotateX(270deg) translateZ(11px);
-  }
+.wrap1 > .cube img:nth-child(4){ /* 4번째 이미지 */
+  transform: rotateX(270deg) translateZ(11px);
+}
 
 a {
   text-decoration-line: none;  /* 링크 밑줄쳐진것들 제거  */
@@ -134,19 +130,19 @@ a {
 
 
 .wrap2 {   /* 전광판 LED창 */
-    position: fixed;
-    top: 61px;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-	color: aliceblue;
-    margin: 0 auto;
-	width: 469px; /* LED 글자창 너비 */
-	height: 30px;
-    line-height: 20px;
-	padding: 0 66px; /* LED창 길이변 */
-	background-image: url("image/bg.gif");
-	border-radius: 2px 2px 0px 0px;
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  color: aliceblue;
+  margin: 0 auto;
+  width: 469px; /* LED 글자창 너비 */
+  height: 30px;
+  line-height: 20px;
+  padding: 0 66px; /* LED창 길이변 */
+  background-image: url("image/bg.gif");
+  border-radius: 2px 2px 0px 0px;
 }
   
 
@@ -199,9 +195,9 @@ a {
 
 			
 			
-	/* 직지35 전화번호부  시작  */		
+/* 직지35 전화번호부  시작  */		
 			
-	 /* 테이블 목록(소제목/회원 목록) */
+/* 테이블 목록(소제목/회원 목록) */
 .container > table { 
   width: 100%;
   margin-top: 92px; /* 테이블 가려진것을 밑으로 내린다 */
@@ -264,9 +260,9 @@ tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
 
 .gototop{    /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
 
-    position: fixed;
-    left:18.5rem; 
-    bottom: 1.56rem; 
+    position: fixed; /* 화살표 위치고정 */
+    top: 823px;
+    left: 800px; 
 }
 
 .gototop .fa{    /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
@@ -297,32 +293,42 @@ tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
 			
 			
 
-  @media (max-width: 580px) {
-    .hidden {
-      display: none;
-    }
-    
-    /* 전체 넓이 지정 */
-    .container {
-      width: 360px;
-
-    } 
-
-    .header{
-      width: 360px;
-  }  
-    
-    .wrap2 {   /* 전광판 LED창 */
-      width: 360px; /* LED 글자창 너비 */
-    }
-
-    #billboard-container { /* 전광판 LED창 */
-      width: 80%;  /* LED창 텍스트보여주는 면적공간 */
-
-      }
-    
-    
+@media (max-width: 580px) {
+  .hidden {
+    display: none;
   }
+
+  /* 전체 넓이 지정 */
+  .container {
+    width: 360px;
+
+  } 
+
+  .header{
+    width: 360px;
+}  
+
+  .wrap2 {   /* 전광판 LED창 */
+    width: 360px; /* LED 글자창 너비 */
+  }
+
+  #billboard-container { /* 전광판 LED창 */
+    width: 68%;  /* LED창 텍스트보여주는 면적공간 */
+    overflow: hidden;
+    white-space: nowrap; 
+    }
+
+  .gototop{    /* 우측제일하단 화살표를 누르면 제일위로 이동하게한다. */
+
+    position: fixed; /* 화살표 위치고정 */
+    top: 649px;
+    left: 289px; 
+
+}
+
+  
+  
+}
 
 
 

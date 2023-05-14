@@ -31,13 +31,14 @@ td{border-spacing:0px;border-style:none;padding:0px;}
 section {    
   margin: 0;
   padding: 0;
+/*  overflow: hidden;*/
 }
 
 
 /*CSS : 시계를 꾸미는 부분*/
 .header{
     position: fixed;
-    width: 100%;
+    width: 360px;
     height: 88px;
     margin: 0;
     text-align: center;
@@ -87,7 +88,7 @@ section {
   .wrap1 > .cube img{
       position: absolute;
       top: 0;
-      left: 4px;
+      left: 2px;
   }
 
   .wrap1 > .cube img:nth-child(1){ /* 1번째 이미지 */
@@ -118,10 +119,10 @@ a {
     top: 61px;
     left: 0;
     right: 0;
-  
+    overflow: hidden;
 	color: aliceblue;
     margin: 0 auto;
-	width: 100%; /* LED 글자창 너비 */
+	width: 230px; /* LED 글자창 너비 */
 	height: 30px;
     line-height: 20px;
 	padding: 0 66px; /* LED창 길이변 */
@@ -131,7 +132,7 @@ a {
   
 
 #billboard-container { /* 전광판 LED창 */
-  width: 70%;  /* LED창 텍스트보여주는 면적공간 */
+  width: 100%;  /* LED창 텍스트보여주는 면적공간 */
   height: 100%;
 /*  border: 1px solid red;*/
   margin: 0 center;

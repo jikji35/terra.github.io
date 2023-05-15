@@ -212,32 +212,46 @@ a {
 }
 
 
+
+
 thead > tr th { /* 제목: NO, 이름, 전화번호, 거주지, 기타, SMS */
-  font-size: 14px;
+  font-size: 15px;
 }
 
-tbody tr td { /* 개인정보 입력구간 */
-  font-size: 12px;
+thead > tr th:nth-child(1) { /* NO */
+    font-size: 9px;
+}
+thead > tr th:nth-child(4) { /* 거주지 */
+    font-size: 14px;
 }
 
+
+
+
+/*
+tbody tr td { 
+  font-size: 15px;
+}
+*/
+ /* 개인정보 입력구간 */
 tbody tr td:nth-child(1) { /* 소제목(NO 입력) */
-
+  font-size: 10px;
 }
 
 tbody tr td:nth-child(2) { /* 소제목(이름 입력) */
-
+  font-size: 15px;
 }
 
 tbody tr td:nth-child(2) { /* 소제목(전화번호 입력) */
-
+  font-size: 15px;
 }
 
 tbody tr td:nth-child(4) { /* 소제목(거주지 입력) */
-
+  font-size: 13px;
 }
 
 tbody tr td:nth-child(5) { /* 소제목(비고 입력)- 모바일용일때는 사라짐! */
-
+  font-size: 13px;
 }
 
 tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
@@ -249,6 +263,12 @@ tbody tr td:nth-child(6) > a > span > img {  /* SMS 아이콘 */
 
 
 /* 하단부 화살표, 외부링크 */
+/*
+#footer {
+  position: relative;
+}
+*/
+
 .foot{
 	display: block;
 	color: antiquewhite;

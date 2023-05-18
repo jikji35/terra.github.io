@@ -8,14 +8,19 @@
     <meta name="description" content="직지35회" />
     <meta name="format-detection" content="telephone=no">
     <title>☏직지35</title>
-    <link rel="icon" href="./image/favicon.ico" />
+    <link rel="icon" href="./favicon/favicon.ico" />
     <link rel="stylesheet" href="./style.css">
     <script src="./jikji.js"></script>	
     <!-- (아래) manifest.json파일 ~ 앱스토어에 등록하지 않아도 사용 가능: 사용자가 웹 페이지를 방문하면, 바로 사용할 수 있습니다. 앱스토어에 등록하지 않아도 되므로, 앱 설치 및 업데이트에 대한 제약이 없습니다.-->
     <!--    홈 화면에 설치 가능: 사용자가 앱 아이콘을 홈 화면에 추가할 수 있습니다. 이를 통해, 마치 네이티브 앱처럼 사용이 가능합니다.-->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="32x32" href="/apple-icon-32x32.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="36x36"  href="/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48"  href="/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- 마우스 우클릭 방지/드래그 방지하는 스크립트를 head안에 삽입! -->
       <script type="text/javascript">
@@ -438,7 +443,10 @@
       </tbody>
 	</table> <!-- 번호,이름,전화번호,거주지,비고,SMS 구간 끝! -->
 		
-		<tr>
+		
+         
+        <div id="footer"> 
+         <tr>
           <td colspan="6">
             <div class="gototop">
               <!-- 우측제일하단 화살표를 누르면 제일위로 이동하게한다.   -->
@@ -454,6 +462,8 @@
             </div>
           </td>
         </tr>
+      </div>
+      
 	</div>
 	
   </body>

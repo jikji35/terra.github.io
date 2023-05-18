@@ -2,6 +2,12 @@
  "name": "App",
  "icons": [
   {
+   "src": "\/favicon.ico",
+   "sizes": "16x16",
+   "type": "image\/ico",
+   "density": "0.75"
+  }, 
+  {
    "src": "\/favicon-16x16.png",
    "sizes": "16x16",
    "type": "image\/png",

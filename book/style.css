@@ -30,6 +30,9 @@ body {
 
 
 
+.user>span{
+    margin-top: 600px;
+}
 
 
 /*  네비바 고정  */

@@ -1,0 +1,46 @@
+
+body {
+    margin: 0;
+    /* line-height: 1.6em; */
+    font-size: 16px;
+ }
+
+
+
+.container {
+    width: 100%;
+	/* width: 1080px; */
+	position: relative;
+	margin: 0 auto; /* 컨테이너 좌우 중앙정렬  */
+}
+
+
+
+
+
+
+
+
+
+
+
+	/* @media 는 반응형으로 변할수있게 설정하는 부분이다. 580px너비가 되면
+	아래형식으로 변화시키라는 의미이다.  */
+	@media ( max-width: 570px ){
+
+
+		.container {
+			width: 100%;
+			/* width: 1080px; */
+			position: relative;
+			margin: 0 auto; /* 컨테이너 좌우 중앙정렬  */
+		}
+		
+	 
+
+	 
+		
+		
+	}
+		
+    
